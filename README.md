@@ -125,20 +125,23 @@ Additional [sample posts](https://anandtrex.github.io/so-simple-libre-theme/post
 
 ## Installation
 
-If you're running Jekyll v3.5+ and self-hosting you can quickly install the theme as a Ruby gem. If you're hosting with [**GitHub Pages**](https://pages.github.com/) you can install as a [remote theme](https://github.com/benbalter/jekyll-remote-theme) or directly copy all of the theme files (see [structure](#structure) below) into your project.
+If you're running Jekyll v3.5+ and self-hosting you can quickly install the theme as a Ruby gem. 
+If you're hosting with [**GitHub Pages**](https://pages.github.com/) you can install as a 
+[remote theme](https://github.com/benbalter/jekyll-remote-theme) or directly copy all of the theme files 
+(see [structure](#structure) below) into your project.
 
 ### Ruby Gem Method
 
 1. Add this line to your Jekyll site's `Gemfile` (or [create one](example/Gemfile)):
 
    ```ruby
-   gem "jekyll-theme-so-simple"
+   gem "jekyll-theme-so-simple-libre"
    ```
 
 2. Add this line to your Jekyll site's `_config.yml` file:
 
    ```yaml
-   theme: jekyll-theme-so-simple
+   theme: jekyll-theme-so-simple-libre
    ```
 
 3. Then run [Bundler](http://bundler.io/) to install the theme gem and dependencies:
@@ -177,11 +180,9 @@ If you forked or downloaded the [`so-simple-libre-theme` repo](https://github.co
 * `example`
 * `.editorconfig`
 * `.gitattributes`
-* `banner.js`
 * `CHANGELOG.md`
 * `Gemfile`
 * `jekyll-theme-so-simple.gemspec`
-* `package.json`
 * `Rakefile`
 * `README.md`
 * `screenshot.png`
@@ -201,7 +202,7 @@ To check which version you are currently using, view the source of your built si
 -->
 ```
 
-This will be at the top of every `.html` file, `/assets/css/main.css`, and `/assets/js/main.js`.
+This will be at the top of every `.html` file, `/assets/css/main.css`.
 
 ### Ruby Gem
 
@@ -268,7 +269,8 @@ Here's a quick checklist of the important folders/files you'll want to be mindfu
 
 ---
 
-**Note:** If you're not seeing the latest version, be sure to flush browser and CDN caches. Depending on your hosting environment older versions of `/assets/css/main.css`, `/assets/js/main.min.js`, or `*.html` files may be cached.
+**Note:** If you're not seeing the latest version, be sure to flush browser and CDN caches. 
+Depending on your hosting environment older versions of `/assets/css/main.css`, or `*.html` files may be cached.
 
 ## Structure
 
@@ -286,8 +288,6 @@ Layouts, includes, Sass partials, and data files are all placed in their default
 ├── assets
 |  ├── css
 |  |  └── main.scss
-|  └── js
-|     └── main.min.js
 ├── _config.yml         # sample configuration
 └── index.md            # sample home page (recent posts/not paginated)
 ```
@@ -946,64 +946,10 @@ To make basic tweaks to theme's style, Sass variables can be overridden by addin
 $accent-color: tomato;
 ```
 
-### Customizing JavaScript
-
-To override the default JavaScript bundled in the theme, do one of the following:
-
-1. Copy directly from the So Simple gem
-
-   * Go to your local So Simple gem installation directory (run
-     `bundle show jekyll-theme-so-simple` to get the path to it).
-   * Copy the contents of `/assets/js/main.js` from there to
-     `<your_project>`.
-   * Customize what you want inside `<your_project>/assets/js/main.js`.
-
-2. Copy from this repo.
-
-   * Copy the contents of [`/assets/js/main.js`](assets/js/main.js)
-     to `<your_project>`.
-   * Customize what you want inside `<your_project>/assets/js/main.js`.
-
-The theme's [`/assets/js/main.min.js`](assets/js/main.min.js) file is built from jQuery plugins and other scripts found in [`/assets/js/`](assets/js).
-
-```
-├── assets
-|  ├── js
-|  |  ├── lunr                             # Lunr search plugin
-|  |  |   ├── lunr.xx.js                   # Lunr language plugins
-|  |  |   ├── ...
-|  |  |   ├── lunr.min.js
-|  |  |   └── lunr.stemmer.support.min.js
-|  |  ├── plugins
-|  |  |   ├── jquery.smooth-scroll.min.js  # make same-page links scroll smoothly
-|  |  |   ├── lity.min.js                  # responsive lightbox
-|  |  |   └── table-of-contents.js         # table of contents toggle
-|  |  ├── main.js                          # jQuery plugin settings and other scripts
-|  |  ├── main.min.js                      # concatenated and minified scripts
-|  |  ├── search-data.json                 # search index used by Lunr
-```
-
-To modify or add your own scripts, include them in `assets/js/main.js` and then rebuild using `npm run build:js`. [See below for more details](#javascript-build-script).
-
-If you add additional scripts to `/assets/js/plugins/` and would like them concatenated with the others, be sure to update the `uglify` script in [`package.json`](package.json). Same goes for scripts that you remove.
-
-You can also add scripts to the `<head>` or closing `</body>` elements by adding paths to the following arrays in `_config.yml`.
-
-**Example:**
-
-```yaml
-head_scripts:
-  - https://code.jquery.com/jquery-3.2.1.min.js
-  - /assets/js/your-custom-head-script.js
-footer_scripts:
-  - /assets/js/your-custom-footer-script.js
-```
-
-**Note:** If you assign paths to `footer_scripts` the theme's `/assets/js/main.min.js` file will be deactivated. This script includes plugins and other scripts that will cease to function unless you specifically add them to the `footer_scripts` array.
-
 ## Font Awesome Icons
 
-The theme utilizes the [**Font Awesome** SVG with JS](https://fontawesome.com/) version for iconography. Prominent locations these icons appear are in the author sidebar and footer links.
+The theme utilizes the [**Font Awesome** webfonts with CSS](https://fontawesome.com/) version for iconography. 
+Prominent locations these icons appear are in the author sidebar and footer links.
 
 ---
 
@@ -1022,19 +968,6 @@ To test the theme locally as you make changes to it:
 
 This starts a Jekyll server using the theme's files and contents of the `example/` directory. As modifications are made, refresh your browser to see any changes.
 
-### JavaScript Build Script
-
-In an effort to reduce dependencies a set of [npm scripts](https://css-tricks.com/why-npm-scripts/) are used to build `main.min.js` instead of task runners like [Gulp](http://gulpjs.com/) or [Grunt](http://gruntjs.com/). If those tools are more your style then by all means use them instead :wink:.
-
-To get started:
-
-1. Install Node.js.
-2. `cd` to the root of your project.
-3. Install all of the dependencies by running npm install.
-
-**Note:** If you upgraded from a previous version of the theme be sure you copied over [`package.json`](package.json) prior to running `npm install`. You may also need to remove your `node_modules` directory as well.
-
-If all goes well, executing `npm run build:js` will compress/concatenate `main.js` and all plugin scripts into `/assets/js/main.min.js`.
 
 ## Contributing
 
@@ -1071,6 +1004,13 @@ When submitting a pull request:
 * <https://twitter.com/mmistakes>
 * <https://github.com/mmistakes>
 
+### Adaptation for Libre version
+
+**Anand S**
+
+* <https://anand.ink/about>
+* <https://github.com/anandtrex>
+
 ### Icons + Demo Images:
 
 * [Font Awesome](https://fontawesome.com)
@@ -1081,10 +1021,7 @@ When submitting a pull request:
 
 * [Jekyll](http://jekyllrb.com/)
 * [Breakpoint](http://breakpoint-sass.com/)
-* [jQuery](http://jquery.com/)
-* [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
 * [Lity](https://sorgalla.com/lity/)
-* [Lunr](http://lunrjs.com/)
 
 ---
 
@@ -1123,14 +1060,6 @@ So Simple incorporates photographs from [WeGraphics](http://wegraphics.net/downl
 
 So Simple incorporates [Breakpoint](http://breakpoint-sass.com/).
 Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
-
-So Simple incorporates [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll),
-Copyright (c) 2017 Karl Swedberg.
-jQuery Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-So Simple incorporates [Lunr](http://lunrjs.com),
-Copyright (c) 2017 Oliver Nightingale.
-Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 So Simple incorporates [Lity](http://sorgalla.com/lity/),
 Copyright (c) 2015-2016, Jan Sorgalla.
