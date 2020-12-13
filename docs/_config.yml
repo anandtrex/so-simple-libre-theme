@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# theme: jekyll-theme-so-simple
-remote_theme: anandtrex/so-simple-theme-libre
+# theme: jekyll-theme-so-simple-libre
+remote_theme: anandtrex/so-simple-libre-theme
 
 locale: en-US
 title: "So Simple Libre"
 description: "A simple Jekyll theme for words and pictures."
-baseurl: "/so-simple-theme-libre"
+baseurl: "/so-simple-libre-theme"
 url: "https://anandtrex.github.io"
 logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
