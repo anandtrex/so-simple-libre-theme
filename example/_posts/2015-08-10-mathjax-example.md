@@ -10,18 +10,13 @@ including Tex/LaTex/MathML based mathematics in HTML webpages.
 
 To enable MathJax support configure your `_config.xml` to:
  * Set `kramdown` as the Markdown parser.
- * Enable MathJax.
+ * Add MathJax to your post.
 
-The version of MathJax enabled is v3.
+Add the following code to the bottom of your post markdown file.
 
-An example setting for `_config.xml` is shown below:
-
-```yaml
-markdown: kramdown
-mathjax:
-  enable: true
-  combo: "tex-svg"
-  tags: "ams"
+```html
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 ```
 
 Use `$$` as delimiters to enable TeX math mode, both for inline and display (i.e. block) rendering.
