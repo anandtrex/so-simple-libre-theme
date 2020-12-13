@@ -67,7 +67,6 @@ so-simple-theme/
 |    ├── head.html               # site head
 |    ├── navigation.html         # site top navigation
 |    ├── open-graph.html         # meta data for Open Graph and Twitter cards
-|    └── scripts.html            # site scripts
 ├── _layouts/
 |    ├── page.html               # single column page layout
 |    └── post.html               # main content with sidebar for author/post details
