@@ -25,10 +25,6 @@ logo: # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
-mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
-  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
 twitter:
   username: # site's Twitter username, e.g. "mmistakes"
 
@@ -42,9 +38,11 @@ markdown: kramdown
 feed:
   path: atom.xml
 
-# Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 10
-# paginate_path: /page:num/
+# https://github.com/sverrirs/jekyll-paginate-v2
+# pagination:
+#   enabled: true
+#   per_page: 10
+#   permalink: /page:num/
 
 # Search
 search_full_content: false # can have performance implications for large sites
@@ -68,6 +66,8 @@ search_full_content: false # can have performance implications for large sites
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 # Front Matter Defaults
 defaults:

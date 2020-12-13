@@ -26,10 +26,6 @@ logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: # 200
-mathjax:
-  enable: true
-  combo: "tex-svg"
-  tags: "ams"
 twitter:
   username: "mmistakes"
 
@@ -43,9 +39,11 @@ markdown: kramdown
 feed:
   path: atom.xml
 
-# Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 10
-paginate_path: /page:num/
+# https://github.com/sverrirs/jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: /page:num/
 
 # Search
 search_full_content: false
