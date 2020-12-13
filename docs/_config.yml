@@ -19,7 +19,7 @@ remote_theme: anandtrex/so-simple-libre-theme
 
 locale: en-US
 title: "So Simple Libre"
-description: "A simple Jekyll theme for words and pictures."
+description: "A simple Jekyll theme for words and pictures. With support for libre self-hosted service integrations."
 baseurl: "/so-simple-libre-theme"
 url: "https://anandtrex.github.io"
 logo: "/images/so-simple-site-logo.png"
