@@ -417,19 +417,7 @@ mathjax:
   tags: "ams"              # "none", "ams" (default), "all"
 ```
 
-### Google Fonts
-
-Easily use [**Google Fonts**](https://fonts.google.com/) throughout your site by replacing the font `name` and `weights` accordingly. Suggested font pairings are as follows:
-
-```yaml
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-```
-
-**Note:** If other font families are used, be sure to add, then override the following SCSS variables in `/assets/css/main.scss` with the `font-family` values Google provides.
+### Fonts
 
 ```scss
 $serif-font-family: "Lora", serif;
@@ -523,7 +511,7 @@ If you don't want to display comments for a particular post you can disable them
 
 Enable analytics support using [jekyll-analytics][jekyll-analytics]. See example in `_config.yml`.
 
-The Google analytics tracking script will only appear in production when using the following environment value: `JEKYLL_ENV=production`.
+The analytics tracking script will only appear in production when using the following environment value: `JEKYLL_ENV=production`.
 
 ### Other
 
