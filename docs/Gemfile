@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # gem "jekyll"
-# gem "jekyll-theme-so-simple", :git => "https://github.com/mmistakes/so-simple-theme.git", :branch => "rebuild"
+# gem "jekyll-theme-so-simple-libre", :git => "https://github.com/anandtrex/so-simple-libre-theme.git", :branch => "master"
 gem "github-pages", group: :jekyll_plugins
 
 gem "tzinfo-data"

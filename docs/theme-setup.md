@@ -5,7 +5,7 @@ permalink: /theme-setup/
 excerpt: "Instructions on how to install and use the Jekyll theme So Simple."
 last_modified_at: 2018-02-02T14:12:02-05:00
 redirect_to:
-  - https://github.com/mmistakes/so-simple-theme/blob/master/README.md
+  - https://github.com/anandtrex/so-simple-libre-theme/blob/master/README.md
 ---
 
 General notes and suggestions for customizing **So Simple Theme**.
@@ -19,15 +19,15 @@ So Simple now requires [Jekyll](http://jekyllrb.com/) 3.0. Make sure to run `bun
 
 If you are creating a new Jekyll site using So Simple follow these steps:
 
-1. Fork the [So Simple repo](http://github.com/mmistakes/so-simple-theme/fork).
+1. Fork the [So Simple repo](http://github.com/anandtrex/so-simple-libre-theme/fork).
 2. Clone the repo you just forked and rename it.
 3. [Install Bundler](http://bundler.io) `gem install bundler` and Run `bundle install` to install Jekyll and all dependencies.
 4. Update `_config.yml`, add navigation, and replace demo posts and pages with your own. Full details below.
 
 If you want to use So Simple with an existing Jekyll site follow these steps:
 
-1. [Download So Simple](https://github.com/mmistakes/so-simple-theme/archive/master.zip) and unzip.
-2. Rename `so-simple-theme-master` to something meaningful ie: `new-site`
+1. [Download So Simple](https://github.com/anandtrex/so-simple-libre-theme/archive/master.zip) and unzip.
+2. Rename `so-simple-libre-theme-master` to something meaningful ie: `new-site`
 3. Run `bundle install` to install Jekyll and all dependencies.
 4. Remove demo posts/pages and replace with your own posts, pages, and any other content you want to move over.
 5. Update posts' and pages' YAML to match variables used by So Simple. Full details below.
@@ -59,7 +59,7 @@ bundle exec jekyll serve
 How So Simple is organized and what the various files are. All posts, layouts, includes, stylesheets, assets, and whatever else is grouped nicely under the root folder. The compiled Jekyll site outputs to `_site/`.
 
 ```bash
-so-simple-theme/
+so-simple-libre-theme/
 ├── _includes/
 |    ├── browser-upgrade.html    # prompt to install a modern browser for < IE9
 |    ├── feed-footer.html        # post footers in feed
@@ -76,7 +76,7 @@ so-simple-theme/
 ├── articles/                    # sample articles category page
 ├── assets/
 |    ├── css/                    # compiled stylesheets
-|    ├── fonts/                  # webfonts
+|    ├── webfonts/                  # webfonts
 ├── blog/                        # sample blog category page
 ├── images/                      # images for posts and pages
 ├── 404.md                       # 404 page
@@ -112,7 +112,7 @@ Used to generate absolute URLs for sitemaps, feeds and for generating canonical 
 Examples:
 
 ```yaml
-url: https://mmistakes.github.io/so-simple-theme
+url: https://anandtrex.github.io/so-simple-libre-theme
 url: http://localhost:4000
 url: http://yourdomain.com
 url: 

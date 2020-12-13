@@ -1,6 +1,6 @@
 # [So Simple Jekyll Libre Theme][1]
 
-This is a fork for the [So Simple Theme](https://github.com/mmistakes/so-simple-theme) that supports self-hosted
+This is a fork from the [So Simple Theme](https://github.com/mmistakes/so-simple-theme) that supports self-hosted
 analytics, supports comments through privacy-preserving [Talkyard](https://www.talkyard.io) and removes almost all dependence
 on javascript for the site (except for analytics and comments).
 
