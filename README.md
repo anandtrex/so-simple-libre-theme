@@ -342,7 +342,8 @@ Properly setting the locale is important for associating localized text found in
 
 ### Site URL
 
-The base hostname and protocol for your site. If you're hosting with GitHub Pages this will be something like `url: "https://github.io.mmistakes"` or `url: "https://your-site.com"` if you have a custom domain name.
+The base hostname and protocol for your site. If you're hosting with GitHub Pages this will be something like 
+`url: "https://anandtrex.github.io"` or `url: "https://your-site.com"` if you have a custom domain name.
 
 GitHub Pages now [forces `https://` for new sites](https://help.github.com/articles/securing-your-github-pages-site-with-https/), so be mindful of that when setting your URL to avoid mixed-content warnings.
 
@@ -445,16 +446,6 @@ Break up the main listing of posts on the home page across multiple pages by [en
       enabled: true
    ```
 
-### Search
-
-To index the full content of your documents for use in a [search page](#layout-search), set `search_full_content` to `true` in `_config.yml`:
-
-```yaml
-search_full_content: true
-```
-
-**Note:** Large amounts of posts will increase the size of the search index, impacting page load performance. Setting `search_full_content` to `false` (the default) restricts indexing to the first 50 words of body content.
-
 ### Taxonomy Pages
 
 By default, category and tags added to a post are not linked to taxonomy archive pages. To enable this behavior and link to pages with posts grouped by category or tag, add the following:
@@ -488,9 +479,10 @@ To enable Talkyard comments, add your [Talkyard server URL](https://www.talkyard
 
 ```yaml
 talkyard_server_url: https://site-name.talkyard.net
+talkyard_script_url: https://c1.ty-cdn.net/-/talkyard-comments.min.js
 ```
 
-Comments only appear in production when built with the following [environment value](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time): `JEKYLL_ENV=production` to avoid polluting your Disqus account with `localhost` content.
+<!-- Comments only appear in production when built with the following [environment value](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time): `JEKYLL_ENV=production` to avoid polluting your Disqus account with `localhost` content. -->
 
 If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's front matter.
 
