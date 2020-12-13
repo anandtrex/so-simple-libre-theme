@@ -396,25 +396,13 @@ words_per_minute: 200
 
 ### Mathematics
 
-Enable [**MathJax**](https://www.mathjax.org) (a JavaScript display engine for mathematics) site-wide with
+Enable [**MathJax**](https://www.mathjax.org) (a JavaScript display engine for mathematics) on a per-post basis.
 
-``` yaml
-mathjax:
-  enable: true
-```
+Add the following code to the bottom of your post markdown file.
 
-The `combo` option lets you to choose a [MathJax component
-combination](http://docs.mathjax.org/en/latest/web/components/combined.html)--the
-default is "tex-svg."  And, the `tags` option lets you control
-equation numbering--choices are "ams" (default), "all", and "none."
-
-Sample configuration:
-
-``` yaml
-mathjax:
-  enable: true             # MathJax equations, e.g. true, false (default)
-  combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
-  tags: "ams"              # "none", "ams" (default), "all"
+```html
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 ```
 
 ### Fonts
