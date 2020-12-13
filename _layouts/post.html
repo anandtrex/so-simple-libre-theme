@@ -30,6 +30,10 @@ layout: default
           {% include social-share.html %}
         {% endif %}
 
+        {% if site.talkyard_server_url %}
+          {% include talkyard-comments-provider.html %}
+        {% endif %}
+
         {% include page-pagination.html %}
       </div>
     </div>
