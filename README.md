@@ -1,8 +1,8 @@
 # [So Simple Jekyll Libre Theme][1]
 
 This is a fork for the [So Simple Theme](https://github.com/mmistakes/so-simple-theme) that supports self-hosted
-analytics, supports comments through privacy-preserving [Talkyard](https://www.talkyard.io) and removes all dependence
-on javascript for the site.
+analytics, supports comments through privacy-preserving [Talkyard](https://www.talkyard.io) and removes almost all dependence
+on javascript for the site (except for analytics and comments).
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square)](https://raw.githubusercontent.com/anandtrex/so-simple-libre-theme/master/LICENSE)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg?style=flat-square)](https://jekyllrb.com/)
@@ -16,7 +16,7 @@ So Simple is a simple [Jekyll theme](https://jekyllrb.com/docs/themes/) for your
 * Self-hosted Analytics support via [Jekyll Analytics][jekyll-analytics].
 * SEO best practices via [Jekyll SEO Tag][jekyll-seo-tag].
 * Options to customize the theme and make it your own.
-* No javascript
+* Almost no javascript (except for analytics and comments).
 
 :sparkles: **See what's new in the [CHANGELOG](CHANGELOG.md).**
 
