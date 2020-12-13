@@ -6,7 +6,7 @@ on javascript for the site (except for analytics and comments).
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square)](https://raw.githubusercontent.com/anandtrex/so-simple-libre-theme/master/LICENSE)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg?style=flat-square)](https://jekyllrb.com/)
-[![Ruby gem](https://img.shields.io/gem/v/jekyll-theme-so-simple.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-so-simple)
+[![Ruby gem](https://img.shields.io/gem/v/jekyll-theme-so-simple.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-so-simple-libre)
 
 So Simple is a simple [Jekyll theme](https://jekyllrb.com/docs/themes/) for your words and pictures. Built to provide:
 
@@ -182,7 +182,7 @@ If you forked or downloaded the [`so-simple-libre-theme` repo](https://github.co
 * `.gitattributes`
 * `CHANGELOG.md`
 * `Gemfile`
-* `jekyll-theme-so-simple.gemspec`
+* `jekyll-theme-so-simple-libre.gemspec`
 * `Rakefile`
 * `README.md`
 * `screenshot.png`
@@ -191,22 +191,9 @@ If you forked or downloaded the [`so-simple-libre-theme` repo](https://github.co
 
 If you're using the Ruby Gem or remote theme versions of So Simple, upgrading is fairly painless.
 
-To check which version you are currently using, view the source of your built site and you should something similar to:
-
-```
-<!--
-    So Simple Jekyll Theme 3.0.0
-    Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
-    Free for personal and commercial use under the MIT license
-    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
--->
-```
-
-This will be at the top of every `.html` file, `/assets/css/main.css`.
-
 ### Ruby Gem
 
-Simply run `bundle update` if you're using Bundler (have a `Gemfile`) or `gem update jekyll-theme-so-simple` if you're not.
+Simply run `bundle update` if you're using Bundler (have a `Gemfile`) or `gem update jekyll-theme-so-simple-libre` if you're not.
 
 ### Remote Theme
 
@@ -276,7 +263,8 @@ Depending on your hosting environment older versions of `/assets/css/main.css`, 
 
 Layouts, includes, Sass partials, and data files are all placed in their default locations. Stylesheets and scripts can be found in `assets`, and a few development related files in the project's root directory.
 
-**Please note:** If you installed So Simple via the Ruby Gem or remote theme methods, theme files found in `/_layouts`, `/_includes`, `/_sass`, and `/assets` will be missing from your project. This is normal as they are bundled with the [`jekyll-theme-so-simple`](https://rubygems.org/gems/jekyll-theme-so-simple) gem.
+**Please note:** If you installed So Simple via the Ruby Gem or remote theme methods, theme files found in `/_layouts`, `/_includes`, `/_sass`, and `/assets` will be missing from your project. 
+This is normal as they are bundled with the [`jekyll-theme-so-simple-libre`](https://rubygems.org/gems/jekyll-theme-so-simple-libre) gem.
 
 ```
 ├── _data               # data files
@@ -909,7 +897,7 @@ Theme files can be [overridden](http://jekyllrb.com/docs/themes/#overriding-them
 
 * To add another social sharing button to [`_includes/social-share.html`](_includes/social-share.html), create an `_includes` directory in your project, copy `_includes/social-share.html` from So Simple's gem folder to `<your_project>/_includes` and edit that file.
 
-**ProTip:** to locate the theme's files on your computer run `bundle show jekyll-theme-so-simple`. This returns the location of the gem-based theme files.
+**ProTip:** to locate the theme's files on your computer run `bundle show jekyll-theme-so-simple-libre`. This returns the location of the gem-based theme files.
 
 The theme comes with two files to help inject custom markup and content into predefined locations.
 
@@ -926,7 +914,7 @@ To override the default [Sass](http://sass-lang.com/guide) (located in theme's
 1. Copy directly from the So Simple gem
 
    * Go to your local So Simple gem installation directory (run
-     `bundle show jekyll-theme-so-simple` to get the path to it).
+     `bundle show jekyll-theme-so-simple-libre` to get the path to it).
    * Copy the contents of `/assets/css/main.scss` from there to
      `<your_project>`.
    * Customize what you want inside `<your_project>/assets/css/main.scss`.
@@ -961,7 +949,7 @@ To set up your environment to develop this theme:
 
 To test the theme locally as you make changes to it:
 
-1. `cd` into the root folder of the repo (e.g. `jekyll-theme-so-simple`).
+1. `cd` into the root folder of the repo (e.g. `jekyll-theme-so-simple-libre`).
 2. Run `bundle exec rake preview` and open your browser to
    `http://localhost:4000/example/`.
 
