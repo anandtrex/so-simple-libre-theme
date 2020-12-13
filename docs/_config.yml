@@ -15,19 +15,17 @@
 # in the templates via {{ site.myvariable }}.
 
 # theme: jekyll-theme-so-simple
-remote_theme: mmistakes/so-simple-theme
+remote_theme: anandtrex/so-simple-theme-libre
 
 locale: en-US
-title: "So Simple"
+title: "So Simple Libre"
 description: "A simple Jekyll theme for words and pictures."
-baseurl: "/so-simple-theme"
-url: "https://mmistakes.github.io"
+baseurl: "/so-simple-theme-libre"
+url: "https://anandtrex.github.io"
 logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: # 200
-twitter:
-  username: "mmistakes"
 
 # Liquid
 liquid:
@@ -98,31 +96,31 @@ defaults:
 
 # Site Author
 author:
-  name: Michael Rose
-  picture: /images/michael-rose-photo.jpg
+  name: Anand S
+  # picture: /images/michael-rose-photo.jpg
   email:
-  twitter: mmistakes
+  # twitter: mmistakes
   links:
-    - title: Twitter
-      url: https://twitter.com/mmistakes
-      icon: fab fa-twitter-square
-    - title: Instagram
-      url: https://instagram.com/mmistakes
-      icon: fab fa-instagram
+    # - title: Twitter
+    #   url: https://twitter.com/mmistakes
+    #   icon: fab fa-twitter-square
+    # - title: Instagram
+    #   url: https://instagram.com/mmistakes
+    #   icon: fab fa-instagram
     - title: GitHub
-      url: https://github.com/mmistakes
+      url: https://github.com/anandtrex
       icon: fab fa-github-square
 
 # Footer Links
 footer_links:
-  - title: Twitter
-    url: https://twitter.com/mmistakes
-    icon: fab fa-twitter-square
-  - title: Instagram
-    url: https://instagram.com/mmistakes
-    icon: fab fa-instagram
+  # - title: Twitter
+  #   url: https://twitter.com/mmistakes
+  #   icon: fab fa-twitter-square
+  # - title: Instagram
+  #   url: https://instagram.com/mmistakes
+  #   icon: fab fa-instagram
   - title: GitHub
-    url: https://github.com/mmistakes
+    url: https://github.com/anandtrex
     icon: fab fa-github-square
   - title: Feed
     url: atom.xml
@@ -134,8 +132,8 @@ jekyll_analytics:
   #   anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
   #
   Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
-    url: matomo.example.com # Required - url to Matomo installation without trailing /
-    siteId: "1234"          # Required - replace with your Matomo site id (Write id as string)
+    url: matomo.anand.one   # Required - url to Matomo installation without trailing /
+    siteId: "7"          # Required - replace with your Matomo site id (Write id as string)
   #
   # Piwik:                    # Add, if you want to track with Piwik
   #   url: piwik.example.com  # Required - url to Piwik installation without trailing /
@@ -148,4 +146,5 @@ jekyll_analytics:
   #   domain: 'example.com'   # The domain configured in plausible
   #   source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
 
-talkyard_server_url: https://site-name.talkyard.net
+talkyard_server_url: https://comments-for-anandtrex-github-io.talkyard.net
+talkyard_script_url: https://c1.ty-cdn.net/-/talkyard-comments.min.js
