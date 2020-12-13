@@ -62,7 +62,6 @@ How So Simple is organized and what the various files are. All posts, layouts, i
 so-simple-theme/
 ├── _includes/
 |    ├── browser-upgrade.html    # prompt to install a modern browser for < IE9
-|    ├── disqus-comments.html    # Disqus comments script
 |    ├── feed-footer.html        # post footers in feed
 |    ├── footer.html             # site footer
 |    ├── head.html               # site head
@@ -79,11 +78,6 @@ so-simple-theme/
 ├── assets/
 |    ├── css/                    # compiled stylesheets
 |    ├── fonts/                  # webfonts
-|    └── js/
-|        ├── _main.js            # main JavaScript file, plugin settings, etc
-|        ├── plugins/            # scripts and jQuery plugins to combine with _main.js
-|        ├── scripts.min.js      # concatenated and minified _main.js + plugin scripts
-|        └── vendor/             # vendor scripts to leave alone and load as is
 ├── blog/                        # sample blog category page
 ├── images/                      # images for posts and pages
 ├── 404.md                       # 404 page
@@ -125,10 +119,6 @@ url: http://yourdomain.com
 url: 
 ```
 
-#### Google Analytics and Webmaster Tools
-
-Google Analytics UA and Webmaster Tool verification tags can be entered under `owner` in `_config.yml`. For more information on obtaining these meta tags check [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownership) support.
-
 ### Navigation Links
 
 To set what links appear in the top navigation edit `_data/navigation.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window.*
@@ -157,7 +147,7 @@ Explanations of the various `_layouts` included with the theme and when to use t
 
 ### Post and Page
 
-These two layouts are very similar. Both have an author sidebar, allow for large feature images at the top, and optional Disqus comments. The only real difference is the post layout includes related posts at the end of the page.
+These two layouts are very similar. Both have an author sidebar, allow for large feature images at the top. The only real difference is the post layout includes related posts at the end of the page.
 
 ### Categories
 
@@ -226,8 +216,6 @@ billy_rick:
   bio: "What do you want, jewels? I am a very extravagant man."
   avatar: bio-photo-2.jpg
   twitter: extravagantman
-  google:
-    plus: +BillyRick
 
 cornelius_fiddlebone:
   name: Cornelius Fiddlebone
@@ -235,8 +223,6 @@ cornelius_fiddlebone:
   bio: "I ordered what?"
   avatar: bio-photo.jpg
   twitter: rhymeswithsackit
-  google:
-    plus: +CorneliusFiddlebone
 ```
 
 To assign Billy Rick as an author for our post. We'd add the following YAML front matter to a post:
@@ -244,57 +230,6 @@ To assign Billy Rick as an author for our post. We'd add the following YAML fron
 ```yaml
 author: billy_rick
 ```
-
----
-
-## Social Share Links
-
-To add Facebook, Twitter, and Google+ share links to a post add the following YAML front matter.
-
-```yaml
-share: true
-```
-
-Share links appear below author details in the sidebar.
-
----
-
-## Disqus Comments
-
-To enable comments [signup for a Disqus account](https://disqus.com/admin/signup/?utm_source=New-Site) and create a shortname for your site. Then add it to your `_config.yml` under the site owner section like so:
-
-```yaml
-site:
-  owner:
-    disqus-shortname: shortname
-```
-
-If you would like comments to appear on every post or page that uses the `post.html` layout simply add the following line to your `_config.yml` and you're done.
-
-```yaml
-comments: true
-```
-
-To be more selective and granualar with which posts and pages Disqus comments appear on, add `comments: true` to the YAML Front Matter of each post or page instead.
-
----
-
-## Twitter Cards
-
-Feature and thumbnail images are used by [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) as well. If you don't assign a thumbnail the site logo is used.
-
-Here's an example of a tweet with Twitter Cards enabled.
-
-![Twitter Card summary large image screenshot]({{ site.url }}/images/twitter-card-summary-large-image.jpg)
-
-
----
-
-## Jekyll search
-
-This is a very basic attempt at [indexing a Jekyll site](https://github.com/mathaywarduk/jekyll-search) and returning search results with JSON --- Google quality results this is not.
-
-To exclude posts/pages from search results add `search_omit: true` to their YAML Front Matter.
 
 ---
 
