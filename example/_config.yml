@@ -45,9 +45,6 @@ pagination:
   per_page: 10
   permalink: /page:num/
 
-# Search
-search_full_content: false
-
 # Taxonomy pages
 category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
