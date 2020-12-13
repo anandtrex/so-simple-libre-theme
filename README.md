@@ -426,26 +426,35 @@ See [stylesheet documentation](#customizing-sass-scss) below for more informatio
 
 Break up the main listing of posts on the home page across multiple pages by [enabling pagination](http://jekyllrb.com/docs/pagination/).
 
-1. Include the [`jekyll-paginate`][jekyll-paginate] plugin in your `Gemfile`.
+1. Include the [`jekyll-paginate-v2`][jekyll-paginate] plugin in your `Gemfile`.
 
    ```ruby
    group :jekyll_plugins do
-     gem "jekyll-paginate"
+     gem "jekyll-paginate-v2"
    end
    ```
 
-2. Add `jekyll-paginate` to the `plugins` array (previously `gems`) in your `_config.yml` file and the following pagination settings:
+2. Add `jekyll-paginate-v2` to the `plugins` array (previously `gems`) in your `_config.yml` file and the following pagination settings:
 
    ```yaml
-   paginate: 10  # amount of posts to show per page
-   paginate_path: /page:num/
+   # Pagination Settings
+   pagination:
+     enabled: true
+     per_page: 3
+     offset: 2
+     permalink: '/page/:num/'
+     title: ':title - page :num of :max'
+     limit: 0
+     sort_field: 'date'
+     sort_reverse: true
    ```
 
 3. Create `index.html` (or rename `index.md`) in the root of your project and add the following front matter:
 
    ```yaml
    layout: home
-   paginate: true
+    pagination: 
+      enabled: true
    ```
 
 ### Search
@@ -479,7 +488,9 @@ permalink: /foo/
 
 You'd need to change `category_archive_path` to `"/foo/#` for category links to function properly.
 
-**Note:** You can create dedicated category and tag pages manually with [`layout: category`](#layout-category) and [`layout: tag`](#layout-tag). Or use plugins like [**jekyll-archives**][jekyll-archives] or [**jekyll-paginate-v2**](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md) to generate them automatically.
+**Note:** You can create dedicated category and tag pages manually with [`layout: category`](#layout-category) and 
+[`layout: tag`](#layout-tag). Or use plugins like [**jekyll-archives**][jekyll-archives] or 
+[**jekyll-paginate-v2**](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-AUTOPAGES.md) to generate them automatically.
 
 ### Comments (via Talkyard)
 
@@ -505,7 +516,7 @@ The analytics tracking script will only appear in production when using the foll
 
 For more configuration options be sure to consult the documentation for:
 [**jekyll-seo-tag**][jekyll-seo-tag], [**jekyll-feed**][jekyll-feed],
-[**jekyll-paginate**][jekyll-paginate], and [**jekyll-sitemap**][jekyll-sitemap].
+[**jekyll-paginate-v2**][jekyll-paginate], and [**jekyll-sitemap**][jekyll-sitemap].
 
 ---
 
@@ -1060,6 +1071,6 @@ Table of Contents Toggle is distributed under the terms of the MIT License](http
 [jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
 [jekyll-analytics]: https://github.com/hendrikschneider/jekyll-analytics
 [jekyll-feed]: https://github.com/jekyll/jekyll-feed
-[jekyll-paginate]: https://github.com/jekyll/jekyll-paginate
+[jekyll-paginate]: https://github.com/sverrirs/jekyll-paginate-v2
 [jekyll-sitemap]: https://github.com/jekyll/jekyll-sitemap
 [jekyll-archives]: https://github.com/jekyll/jekyll-archives
